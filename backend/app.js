@@ -25,5 +25,10 @@ app.get('/', (req, res) => {
 app.use('/api/users', userRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/msg', messageRoutes);
+import cors from "cors";
+app.use(cors({
+    origin: "*",
+    methods: "GET,POST,PUT,DELETE",
+}));
 
 export { app };
