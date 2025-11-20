@@ -13,7 +13,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://16.171.162.201:5000/api/msg/", {
+      const response = await fetch("http://16.171.162.201:5001/api/msg/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

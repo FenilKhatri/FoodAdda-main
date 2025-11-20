@@ -12,7 +12,7 @@ const Orders = () => {
     try {
       const formattedName = userName.trim();
       const response = await fetch(
-        `http://16.171.162.201:5000/api/orders/admin/${formattedName}`
+        `http://16.171.162.201:5001/api/orders/admin/${formattedName}`
       );
   console.log(response);
       if (response.ok) {

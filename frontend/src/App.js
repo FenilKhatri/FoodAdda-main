@@ -30,7 +30,7 @@ function App() {
     const calculateLoadTime = () => {
       const perfTiming = performance.timing;
       const loadTime = perfTiming.loadEventEnd - perfTiming.navigationStart;
-      const timeoutDuration = loadTime > 0 ? loadTime : 5000; // Minimum timeout of 5 seconds if loadTime is not available
+      const timeoutDuration = loadTime > 0 ? loadTime : 5001; // Minimum timeout of 5 seconds if loadTime is not available
 
       const timer = setTimeout(() => {
         setLoaded(true);
@@ -45,7 +45,7 @@ function App() {
       // Fallback: Set a default timeout of 5 seconds if performance timing isn't available
       const timer = setTimeout(() => {
         setLoaded(true);
-      }, 5000);
+      }, 5001);
 
       return () => clearTimeout(timer);
     }
